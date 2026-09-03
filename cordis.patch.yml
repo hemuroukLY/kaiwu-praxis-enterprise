@@ -1,0 +1,4 @@
+# kaiwu-praxis-enterprise：只挂载企业管理中枢，不包含数字员工预设和员工工具。
+- insert:
+    - id: kaiwu-praxis-enterprise
+      name: 'kaiwu-praxis-enterprise'
