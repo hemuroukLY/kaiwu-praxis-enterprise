@@ -1,3 +1,15 @@
 node_modules/
 *.log
 *.tgz
+
+# Local credentials and runtime state
+.env
+.env.*
+*.db
+*.db-wal
+*.db-shm
+.kaiwu-enterprise/
+
+# Machine- and test-round-specific launch helpers
+.round*.ps1
+.round*.cmd

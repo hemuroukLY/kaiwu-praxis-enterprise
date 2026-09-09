@@ -3,7 +3,7 @@ import { ensureEnterpriseHub } from '../lib/enterprise-hub.mjs'
 const hub = await ensureEnterpriseHub(console)
 
 async function close() {
-  await new Promise((resolve) => hub.server.close(resolve))
+  await Promise.all((hub.servers || [hub.server]).map((server) => new Promise((resolve) => server.close(resolve))))
   hub.database.close()
   process.exit(0)
 }
@@ -11,4 +11,3 @@ async function close() {
 process.on('SIGTERM', close)
 process.on('SIGINT', close)
 console.log(`READY ${hub.url}`)
-
