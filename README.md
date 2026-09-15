@@ -9,7 +9,7 @@
 ## 安装
 
 ```bash
-dsh plugin --profile <profile> add git+https://github.com/motang1219/kaiwu-praxis-enterprise.git#v0.2.1
+dsh plugin --profile <profile> add git+https://github.com/hemuroukLY/kaiwu-praxis-enterprise.git#v0.2.1
 dsh web --profile <profile> --port 3082
 ```
 
@@ -42,7 +42,7 @@ dsh web --profile <profile> --port 3082
 作为企业终端接入的 DSH 实例应另外安装员工端及便携交付包约定的三个配套插件：
 
 ```bash
-dsh plugin --profile <profile> add git+https://github.com/motang1219/kaiwu-praxis.git
+dsh plugin --profile <profile> add git+https://github.com/hemuroukLY/kaiwu-praxis.git
 dsh plugin --profile <profile> add @nanmicoder/dsh-agent-teams@0.1.14
 dsh plugin --profile <profile> add @vectorize-io/hindsight-coding-agents@0.4.3
 dsh plugin --profile <profile> add dsh-better-sidebar@0.17.1
