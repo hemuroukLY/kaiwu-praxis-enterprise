@@ -22,6 +22,7 @@
 企业端负责：
 
 - 企业总览；
+- **员工档案**（岗位/约束/风格、指标与成长；保存并下发 `updateProfile`）；
 - 终端列表和在线状态；
 - 数字员工与使用情况汇总；
 - 能力库；
@@ -30,7 +31,7 @@
 - 接入管理和一次性注册码；
 - 中枢 API、SQLite 持久化和命令队列。
 
-企业端不包含员工 preset、本地文件工具或员工设置，也不能代替员工端。普通员工电脑不应安装本插件。
+企业端不包含员工 preset、本地文件工具，也不能代替员工端执行。普通员工电脑不应安装本插件。员工端档案页只读。
 
 ## 3. 代码结构
 
@@ -39,8 +40,9 @@
 | `package.json` | 插件元数据、版本和 DSH client 注入 |
 | `cordis.patch.yml` | DSH bundle 接入 |
 | `lib/index.js` | Host 入口，启动企业中枢 |
-| `lib/enterprise-hub.mjs` | HTTP API、鉴权、SQLite、终端和指令状态机 |
-| `lib/client.js` | 企业管理页面自注册 bundle |
+| `lib/enterprise-hub.mjs` | HTTP API、鉴权、SQLite、终端和指令状态机、员工档案存档 |
+| `lib/worker-profile.mjs` | 档案字段规范化、默认播种、指标/成长辅助 |
+| `lib/client.js` | 企业管理页面自注册 bundle（含员工档案页） |
 | `scripts/hub-runner.mjs` | 不启动 DSH UI、单独运行中枢的测试入口 |
 | `scripts/test-hub.mjs` | 中枢接口、安全和持久化回归 |
 

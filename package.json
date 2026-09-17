@@ -1,12 +1,13 @@
 {
   "name": "kaiwu-praxis-enterprise",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "type": "module",
   "description": "开物 Praxis 企业管理端：终端汇总、能力库、批量配置与审计",
   "main": "lib/index.js",
   "exports": {
     ".": "./lib/index.js",
     "./client": "./lib/client.js",
+    "./usage": "./lib/usage/index.mjs",
     "./package.json": "./package.json"
   },
   "files": [

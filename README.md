@@ -2,14 +2,14 @@
 
 开物 Praxis 企业管理端 DSH 插件。它与员工端 `kaiwu-praxis` 独立安装和升级。
 
-跨设备基础版提供总览、终端、数字员工、能力库、批量配置、审计和接入管理。企业中枢使用 SQLite 持久化终端、注册码、指令状态与审计数据；员工端主动上报配置资产和会话计数并拉取配置指令，不需要开放入站端口。
+跨设备基础版提供总览、**员工档案**、终端、数字员工、能力库、批量配置、审计和接入管理。企业中枢使用 SQLite 持久化终端、注册码、指令状态、审计与数字员工档案；员工端主动上报配置资产和会话计数并拉取配置指令，不需要开放入站端口。
 
-企业端不包含数字员工预设、员工设置或员工工具。员工端没有安装企业端时仍可独立使用。
+企业端不包含数字员工预设、员工本地工具。员工档案在企业端编辑，经 `updateProfile` 下发到员工端物化；员工端「员工设置 → 员工档案」只读。员工端没有安装企业端时仍可独立使用。
 
 ## 安装
 
 ```bash
-dsh plugin --profile <profile> add git+https://github.com/hemuroukLY/kaiwu-praxis-enterprise.git#v0.2.1
+dsh plugin --profile <profile> add git+https://github.com/hemuroukLY/kaiwu-praxis-enterprise.git#v0.2.2
 dsh web --profile <profile> --port 3082
 ```
 
